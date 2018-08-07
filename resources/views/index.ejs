@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <%- helmet.title %>
+    <%- helmet.link %>
+    <%- helmet.meta %>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/<%= assetsLoader.get("css/master.scss")%>" />
+    <%if (!!gtmEnable) {%>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer', '<%= gtm %>');</script>
+    <!-- End Google Tag Manager -->
+    <% } %>
+    <%if (!!bundle) { %>
+        <link rel="stylesheet" type="text/css" href="/<%= assetsLoader.get("css/" +  bundle + ".scss")%>" />
+    <% } %>
+</head>
+<body>
+<%if (!!gtmEnable) {%>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= gtm %>"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<% } %>
+<div id="app"><%- htmlMarkup %></div>
+<script>
+    window.__PRELOADED_STATE__ = <%- JSON.stringify(preloadedState).replace(/</g, '\\u003c') %>
+    window.__LOCALIZATION__ = <%- JSON.stringify(localization).replace(/</g, '\\u003c') %>
+    window.__LOCALEDATA__ = <%- localeData %>
+    window.__ASSETS__ = <%- JSON.stringify(assetsLoader.getAll()).replace(/</g, '\\u003c') %>
+</script>
+<script src="/<%= assetsLoader.get("manifest.js")%>"></script>
+<script src="/<%= assetsLoader.get("vendor.js")%>"></script>
+<script src="/<%= assetsLoader.get("main.js")%>"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.logo {
+  width: 160px;
+
+  img {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .logo {
+    width: 120px;
+  }
+}

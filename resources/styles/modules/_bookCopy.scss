@@ -1,0 +1,151 @@
+.bookCopy {
+  box-shadow: $liberbee-box-shadow2;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 25px;
+}
+
+.bookCopy--container1{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  max-width: 880px;
+}
+
+.bookCopy--container2{
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.bookCopy--avatar {
+  margin-right: 25px;
+  color: $liberbee-primary-color !important;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.bookCopy--user {
+  width: 100%;
+
+  .bookCopy--userName {
+    color: $liberbee-primary-color !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .bookCopy--userLocation {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+    font-size: 14px;
+    color: $liberbee-warm-grey-color;
+    margin-top: 3px;
+
+    &:before {
+      content: '';
+      width: 9px;
+      height: 12px;
+      background: url('/img/icons/place-grey.svg');
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+.bookCopy--city {
+  width: 20%;
+}
+
+.bookCopy--rating {
+  width: 10%;
+  display: none;
+}
+
+.bookCopy--user, .bookCopy--city {
+  font-size: 16px;
+}
+
+.bookCopy--action {
+  margin-left: auto;
+}
+
+.bookCopy--deal {
+  width: 220px;
+  display: flex;
+  align-items: center;
+
+  .bookCopy--price {
+    width: 100px;
+    text-align: right;
+    font-weight: 600;
+  }
+
+  .bookCopy--swap {
+
+  }
+}
+
+.bookCopy--condition {
+  width: 20%;
+}
+
+@include media-breakpoint-down(md) {
+  .bookCopy {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+  }
+
+  .bookCopy--action {
+    margin-top: 15px;
+  }
+
+  .bookCopy--container1{
+    justify-content: space-between;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bookCopy--container1{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookCopy--container2{
+    width: 100%;
+  }
+
+  .bookCopy--avatar {
+    margin-right: 15px;
+  }
+
+  .bookCopy--condition {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .bookCopy--deal {
+    width: 100%;
+    margin-top: 15px;
+
+    .deal {
+      justify-content: flex-start;
+    }
+  }
+
+  .bookCopy--action {
+    width: 100%;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+}

@@ -1,0 +1,65 @@
+.ratingSelector {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+}
+
+.ratingSelector--content {
+  display: flex;
+  align-items: center;
+}
+
+.ratingSelector-is-disabled{
+  .ratingSelector--item {
+    cursor: default;
+  }
+}
+
+.ratingSelector-highlight{
+  background: $liberbee-lightgrey4-color;
+  border-radius: 2px;
+  padding: 3px 8px;
+}
+
+.ratingSelector--item {
+  width: 18px;
+  height: 17px;
+  background: url('/img/icons/star-empty.svg');
+  margin-right: 5px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.ratingSelector--title{
+  color: $liberbee-warm-grey-color;
+  margin-right: 10px;
+}
+
+@for $i from 1 through 5 {
+  .ratingSelector-selected-#{$i} {
+    .ratingSelector--item {
+      background: url('/img/icons/star-empty.svg');
+    }
+
+    .ratingSelector--item {
+      &:nth-child(-n+#{$i}) {
+        background: url('/img/icons/star.svg');
+      }
+    }
+  }
+
+  .ratingSelector-hovered-#{$i} {
+    .ratingSelector--item {
+      background: url('/img/icons/star-empty.svg') !important;
+    }
+
+    .ratingSelector--item {
+      &:nth-child(-n+#{$i}) {
+        background: url('/img/icons/star.svg') !important;
+      }
+    }
+  }
+}

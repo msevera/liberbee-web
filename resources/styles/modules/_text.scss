@@ -1,0 +1,52 @@
+.txt{
+  font-family: Roboto, 'sans-serif';
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid $liberbee-cloudy-blue2-color;
+  padding: 12px;
+  width: 100%;
+  color: $liberbee-primary-color;
+  background: #fff;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  &::placeholder{
+    color: $liberbee-cloudy-blue-color;
+  }
+}
+
+.txt-white {
+  border: none;
+  border-radius: 8px;
+}
+
+.txt[disabled]{
+  background: $liberbee-lightgrey2-color;
+  color: $liberbee-warm-grey-color;
+}
+
+.txt-error{
+  border: solid 1px $liberbee-accent-color;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+textarea.txt {
+  height: 100px;
+}
+
+.txt-noBorder{
+  border: none;
+}
+
+.txt-small{
+  height: 15px;
+
+  &.txt-noBorder {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

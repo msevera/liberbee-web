@@ -1,0 +1,169 @@
+.review {
+  padding: 0 25px;
+  .review--body {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $liberbee-lightgrey4-color;
+  }
+}
+
+.review-highlight {
+  padding: 25px 25px;
+  background: $liberbee-lightgrey4-color;
+  border-radius: 4px;
+
+  .review--body {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.review--user {
+  margin-right: 30px;
+
+  .review--header {
+    display: none;
+  }
+
+  a {
+    color: $liberbee-primary-color !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.review--content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.review--text {
+  color: $liberbee-purplish-grey-color;
+}
+
+.review--body {
+  flex: 1;
+}
+
+.review--header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.review--userName {
+  a {
+    font-size: 18px;
+    font-weight: 600;
+    color: $liberbee-primary-color !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.review--footer {
+  margin-top: 10px;
+}
+
+.review--likes {
+  display: flex;
+  align-items: center;
+  min-height: 21px;
+
+  .review--likesHeart, .review--likesHeart-is-full {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+  }
+
+  .review--likesHeart {
+    background-image: url('/img/icons/heart.svg');
+
+  }
+
+  .review--likesHeart-is-full {
+    background-image: url('/img/icons/heart-full.svg');
+  }
+
+  .review--likesCount {
+    margin-left: 7px;
+  }
+}
+
+.review--date {
+  color: $liberbee-warm-grey-color;
+}
+
+.review--headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.review--userName {
+  margin-right: 20px;
+}
+
+.review--bookRating{
+  margin-right: 20px;
+}
+
+@include media-breakpoint-down(sm) {
+  .review--content {
+    flex-direction: column;
+  }
+
+  .review--user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+
+    .review--header {
+      display: flex;
+      flex: 1;
+      margin-bottom: 0;
+      margin-left: 15px;
+
+      .review--headerLeft {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .review--body {
+    width: 100%;
+
+    .review--header {
+      display: none;
+    }
+  }
+
+  .review--userName {
+    margin-right: 0;
+    a {
+      font-size: 16px;
+    }
+  }
+
+  .review--date {
+    font-size: 12px;
+    margin-right: 0;
+  }
+
+  .review--footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .review--bookRating{
+    margin-right: 0;
+  }
+}

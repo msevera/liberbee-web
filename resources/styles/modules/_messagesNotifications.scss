@@ -1,0 +1,38 @@
+.messagesNotifications {
+  width: 500px;
+  background: $liberbee-pale-grey-color;
+}
+
+.messagesNotifications-is-empty {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.messagesNotifications--empty {
+  padding: 15px;
+  color: $liberbee-purplish-grey-color;
+}
+
+.messagesNotifications--showAll {
+  display: flex;
+  justify-content: center;
+}
+
+.messagesNotifications--more {
+  margin-left: 5px;
+  color: $liberbee-warm-grey-color;
+}
+
+@include media-breakpoint-down(xs) {
+  .messagesNotifications{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .messagesNotifications--empty{
+    text-transform: initial;
+    padding: 5px;
+    font-size: 14px;
+  }
+}

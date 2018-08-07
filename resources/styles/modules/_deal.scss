@@ -1,0 +1,66 @@
+.deal {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  &.deal-center{
+    justify-content: center;
+
+    .deal--left {
+      width: auto;
+      min-width: 0;
+    }
+  }
+
+  &.deal-left {
+    .deal--left {
+      width: auto;
+      min-width: 0;
+    }
+  }
+}
+
+.deal--left {
+  width: 167px;
+  min-width: 167px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.deal--price {
+
+}
+
+.deal--or {
+  font-size: 12px;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  &.deal--or-is-hidden {
+    visibility: hidden;
+  }
+}
+
+.deal--swap,.deal--giveaway {
+  border-radius: 4px;
+  padding: 1px 7px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.deal--swap {
+  background: $liberbee-giveaway-color;
+}
+
+.deal--giveaway {
+  background: $liberbee-lend-color;
+}
+
+@include media-breakpoint-down(sm) {
+  .deal--left{
+    width: auto;
+    min-width: 0;
+  }
+}

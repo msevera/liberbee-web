@@ -1,0 +1,55 @@
+.tutorial{
+  .resendEmail{
+    .resendEmail--action{
+      display: none;
+    }
+  }
+}
+
+.tutorial--welcome{
+  font-size: 20px;
+  color: $liberbee-steel-color;
+  margin-bottom: 20px;
+  font-weight: 300;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.tutorial--final{
+  text-align: center;
+
+  .tutorial--finalSubTitle{
+    font-size: 20px;
+    color: $liberbee-steel-color;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .tutorial--description {
+    font-size: 20px;
+    color: $liberbee-steel-color;
+    margin-bottom: 20px;
+    font-weight: 300;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .tutorial--welcome {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .tutorial {
+    .actionBlock--actions{
+      margin-top: 15px;
+    }
+  }
+
+  .tutorial--final{
+    .tutorial--description {
+      font-size: 16px;
+    }
+  }
+}

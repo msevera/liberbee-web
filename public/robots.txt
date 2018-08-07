@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/icons/
+Disallow: /*/messages/
+Disallow: /*/users/
+Disallow: /*/draft/
+Disallow: /*/addbook
+Disallow: /*/login
+Disallow: /*/signup

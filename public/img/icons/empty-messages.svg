@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="211" height="156" viewBox="0 0 211 156">
+    <defs>
+        <rect id="a" width="132" height="35" x="42" y="18" rx="3.96"/>
+        <rect id="b" width="114" height="30" x="19" y="55" rx="3.96"/>
+        <rect id="c" width="105" height="28" x="54" y="88" rx="3.96"/>
+        <rect id="d" width="76" height="18" x="36" y="118" rx="3.96"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+        <rect width="106" height="28" x="80" y="8" fill="#FAFAFA" rx="3"/>
+        <rect width="106" height="28" x="80" y="76" fill="#FAFAFA" rx="3"/>
+        <rect width="106" height="15" x="6" y="49" fill="#FAFAFA" rx="3"/>
+        <use fill="#FFF" xlink:href="#a"/>
+        <rect width="129.6" height="32.6" x="43.2" y="19.2" stroke="#EAF3F7" stroke-width="2.4" rx="3.96"/>
+        <use fill="#FFF" xlink:href="#b"/>
+        <rect width="111.6" height="27.6" x="20.2" y="56.2" stroke="#EAF3F7" stroke-width="2.4" rx="3.96"/>
+        <use fill="#FFF" xlink:href="#c"/>
+        <rect width="102.6" height="25.6" x="55.2" y="89.2" stroke="#EAF3F7" stroke-width="2.4" rx="3.96"/>
+        <use fill="#FFF" xlink:href="#d"/>
+        <rect width="73.6" height="15.6" x="37.2" y="119.2" stroke="#EAF3F7" stroke-width="2.4" rx="3.96"/>
+        <path stroke="#FDE5D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M79 36h37M79 41h25M79 31.2h51.004"/>
+        <path stroke="#EAF3F7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M49 70h47M81 102h47M51 130h37M49 75h46M81 107h26"/>
+        <path stroke="#DCEAF0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M49 65h21M81 97h21M51 125h21"/>
+        <path fill="#FEE8DC" d="M194.394 124l3.394 3.394-3.394 3.394-3.394-3.394z"/>
+        <path fill="#E0DAF0" d="M199.658 55l1.16 4.657-4.657 1.161-1.16-4.657zM4.658 105l1.16 4.657-4.657 1.161-1.16-4.657z"/>
+        <path fill="#FEE8DC" d="M14.751 23l4.74.751-.75 4.74-4.74-.75z"/>
+        <ellipse cx="94" cy="152" fill="#EAF3F7" opacity=".432" rx="75" ry="3"/>
+        <g transform="translate(51 29)">
+            <path stroke="#FDE5D8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M6.502 0h7.996a6.502 6.502 0 1 1 0 13.004H9.73L8.35 15 7 13.004h-.498A6.502 6.502 0 0 1 6.502 0z"/>
+            <circle cx="7" cy="7" r="1" fill="#FC631A"/>
+            <circle cx="11" cy="7" r="1" fill="#FC631A"/>
+            <circle cx="15" cy="7" r="1" fill="#FC631A"/>
+        </g>
+        <circle cx="33.5" cy="69.5" r="4.9" stroke="#E0DAF0" stroke-width="1.2"/>
+        <circle cx="67" cy="103" r="4.4" stroke="#E0DAF0" stroke-width="1.2"/>
+        <circle cx="44" cy="127" r="2.4" stroke="#E0DAF0" stroke-width="1.2"/>
+        <path fill="#E0DAF0" d="M208.266 74.398l-.516 2.657h2.21v1.007h-2.398l-.656 3.36h-1.07l.656-3.36h-2.367l-.64 3.36h-1.063l.625-3.36H201v-1.007h2.242l.531-2.657h-2.164v-.992h2.336l.64-3.406h1.087l-.64 3.406h2.382L208.07 70h1.047l-.656 3.406h2.062v.992h-2.257zm-3.953 2.657h2.367l.515-2.657h-2.367l-.516 2.657z"/>
+        <g stroke="#6144B7" transform="translate(19)">
+            <circle cx="7.5" cy="2.5" r="2.5"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M.5 2.5h4M10.5 2.5h4"/>
+        </g>
+        <g>
+            <g transform="translate(153 126)">
+                <path fill="#E0DAF0" fill-rule="nonzero" d="M11.263 4.698l-1.136-.227a4.484 4.484 0 0 0-.199-.478l.643-.965a.74.74 0 0 0-.092-.935l-.713-.713a.74.74 0 0 0-.935-.093l-.965.643a4.48 4.48 0 0 0-.479-.198L7.16.596A.74.74 0 0 0 6.433 0H5.425a.741.741 0 0 0-.727.596l-.227 1.136a4.481 4.481 0 0 0-.478.198l-.965-.643a.739.739 0 0 0-.935.093l-.713.713a.74.74 0 0 0-.092.935l.643.965a4.443 4.443 0 0 0-.199.478l-1.136.227A.741.741 0 0 0 0 5.425v1.008c0 .353.25.658.596.727l1.136.228c.057.164.124.323.198.478l-.642.965a.74.74 0 0 0 .092.935l.713.713a.74.74 0 0 0 .935.092l.965-.643c.155.075.314.142.479.199l.227 1.136c.069.346.373.596.726.596h1.008c.354 0 .658-.25.727-.596l.228-1.136c.164-.057.324-.125.478-.199l.965.643a.74.74 0 0 0 .935-.092l.713-.713a.74.74 0 0 0 .092-.935l-.643-.965c.075-.155.142-.315.2-.479l1.135-.227a.741.741 0 0 0 .596-.727V5.425a.742.742 0 0 0-.596-.727zM9.98 6.661a.74.74 0 0 0-.554.483c-.048.137-.103.27-.166.398a.74.74 0 0 0 .05.735l.644.965-.713.713-.965-.643a.74.74 0 0 0-.734-.051 3.747 3.747 0 0 1-.399.166.74.74 0 0 0-.483.555l-.228 1.136H5.425l-.227-1.136a.74.74 0 0 0-.483-.555 3.77 3.77 0 0 1-.398-.165.734.734 0 0 0-.735.05l-.965.643-.713-.713.643-.965a.742.742 0 0 0 .051-.734 3.745 3.745 0 0 1-.166-.399.741.741 0 0 0-.554-.482L.742 6.434V5.425l1.135-.227a.74.74 0 0 0 .555-.483c.048-.137.103-.27.165-.399a.74.74 0 0 0-.05-.734l-.643-.965.713-.713.965.643a.74.74 0 0 0 .734.05c.128-.061.261-.117.398-.165a.74.74 0 0 0 .483-.555L5.425.742h1.008l.227 1.135a.74.74 0 0 0 .484.555c.137.048.27.103.398.166a.74.74 0 0 0 .734-.05l.965-.644.713.713-.643.965a.743.743 0 0 0-.05.734c.062.129.118.261.166.398a.74.74 0 0 0 .554.484l1.136.227v1.008l-1.136.228z"/>
+                <circle cx="5.929" cy="5.929" r="1.779" stroke="#E0DAF0"/>
+            </g>
+        </g>
+    </g>
+</svg>

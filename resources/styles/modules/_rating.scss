@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+  align-items: center;
+  height: 21px;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 17px;
+    background: url('/img/icons/star.svg');
+    display: inline-block;
+    margin-right: 7px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.rating-is-empty {
+  &:before {
+    background: url('/img/icons/star-empty.svg');
+    margin-right: 0;
+  }
+}

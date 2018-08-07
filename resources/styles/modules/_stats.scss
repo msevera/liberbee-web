@@ -1,0 +1,17 @@
+.stats {
+  display: flex;
+  flex-direction: row;
+}
+
+.stats--separator {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.stats--value {
+  margin-right: 5px;
+}
+
+.stats--name {
+  color: $liberbee-warm-grey-color
+}

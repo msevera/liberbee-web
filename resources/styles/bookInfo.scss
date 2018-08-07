@@ -1,0 +1,88 @@
+@import './base/variables';
+@import './base/mixins';
+@import './layout/bookInfo';
+@import './modules/coverUpload';
+@import './modules/bookInfo';
+@import './modules/bookActions';
+@import './modules/bookCopy';
+@import './modules/getBook';
+@import './modules/reviews';
+@import './modules/createReview';
+@import './modules/review';
+@import './modules/ratingSelector';
+
+
+.geoFacet{
+  margin-top: 30px;
+
+  ul ul {
+    margin-left: 20px;
+  }
+
+  > ul{
+    display: flex;
+  }
+}
+
+.geoFacet--country {
+  margin-left: 20px;
+}
+
+.geoFacet--name{
+  cursor: pointer;
+}
+
+.geoFacet--item-is-selected {
+  background: lightgreen;
+}
+
+.bookCopies {
+  margin-top: 30px;
+}
+
+.bookCopies--status {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.bookCopies--count{
+  color: $liberbee-accent-color;
+}
+
+.bookCopies--facets {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.bookCopies--item {
+  margin-bottom: 15px;
+}
+
+.bookCopies--empty {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-top: 70px;
+
+  .bookCopies--emptyPlace {
+    margin-top: 10px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bookCopies {
+    margin-top: 0;
+  }
+
+  .bookCopies--status{
+    font-size: 15px;
+  }
+
+  .bookCopies--facets {
+    display: none;
+  }
+}
+
+

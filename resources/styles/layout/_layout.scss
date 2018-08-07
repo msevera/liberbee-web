@@ -1,0 +1,236 @@
+@import './grid';
+@import '../base/zindex';
+@import './empty';
+
+.l-header {
+  height: 85px;
+  padding: 0 40px;
+  box-shadow: $liberbee-box-shadow1;
+  z-index: z($elements, header);
+  background: #fff;
+}
+
+.l-relative {
+  position: relative;
+}
+
+.l-footer {
+  position: relative;
+}
+
+.l-fixed {
+  position: fixed;
+}
+
+.l-content {
+  margin-top: 85px;
+  position: relative;
+}
+
+.l-content-minHeight {
+  min-height: 800px;
+}
+
+.l-fix {
+  overflow: hidden;
+}
+
+.l-line {
+  height: 1px;
+  opacity: 0.23;
+  border: solid 1px #979797;
+}
+
+.l-hero {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;;
+}
+
+.l-accent {
+  color: $liberbee-accent-color;
+}
+
+.l-success {
+  color: $liberbee-lend-color;
+}
+
+.l-bold {
+  font-weight: bold;
+}
+
+.l-text16 {
+  font-size: 16px;
+}
+
+.l-text18 {
+  font-size: 18px;
+}
+
+.l-books {
+  margin-top: 100px;
+}
+
+.l-book {
+  margin-bottom: 110px;
+}
+
+.l-bookInfo {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.l-infoPage {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.l-addBookSearch {
+  height: 300px;
+  width: 780px;
+}
+
+.l-addBookSearchText {
+  width: 850px;
+  text-align: center;
+}
+
+.l-textCenter {
+  text-align: center;
+}
+
+.l-actions {
+  margin: 40px 0 100px;
+}
+
+.l-associateSide {
+  width: 255px;
+}
+
+.l-resendEmail {
+  margin-top: -20px;
+}
+
+
+
+.l-contentLoading {
+  position: relative;
+  &:before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s, z-index 0s .3s;
+    position: absolute;
+    opacity: 0;
+    top: -56px;
+    left: -1px;
+    z-index: -1;
+    background: #fff;
+    display: block;
+  }
+
+  &.l-contentLoadingTop0{
+    &:before{
+      top: 0;
+    }
+  }
+}
+
+.l-contentLoadingSecondary {
+  &:before {
+    background: $liberbee-lightgrey4-color;
+  }
+}
+
+.l-contentLoading-is-visible {
+  &:before {
+    opacity: 0.8;
+    z-index: 1;
+    display: block;
+    transition: opacity .3s, z-index 0s;
+  }
+}
+
+.l-textSecondary {
+  color: $liberbee-warm-grey-color;
+}
+
+.l-pageLoader {
+  // margin-top: 250px;
+}
+
+
+@include media-breakpoint-down(md) {
+  .l-addBookSearch {
+    width: 100%;
+  }
+
+  .l-addBookSearchText {
+    width: 100%;
+  }
+
+  .l-hero {
+    font-size: 26px;
+  }
+
+  .l-md-fixed {
+    position: fixed;
+  }
+
+  .l-bookInfo {
+    padding-top: 35px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .l-addBookSearch {
+    width: 100%;
+    height: 210px;
+  }
+
+  .l-addBookSearchText {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 28px;
+  }
+
+  .l-header {
+    position: static !important;
+    height: 60px;
+    padding: 0 20px;
+  }
+
+  .l-content {
+    margin-top: 0;
+  }
+
+  .l-actions {
+    margin-top: 30px;
+  }
+
+  .l-resendEmail {
+    margin-top: -10px;
+  }
+
+  .l-content-minHeight {
+    min-height: 450px;
+  }
+
+  .l-sm-text14{
+    font-size: 14px;
+  }
+
+  .l-bookInfo {
+    padding-top: 15px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .l-book {
+    max-width: 300px;
+  }
+
+  .l-actions {
+    margin-top: 25px;
+  }
+}

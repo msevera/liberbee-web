@@ -1,0 +1,39 @@
+.hint {
+  .hint--icon {
+    background: url(/img/icons/question.svg);
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+  }
+
+  .hint--content {
+    position: absolute;
+    //z-index: 2;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    padding: 10px;
+    border: 1px solid $liberbee-lightgrey2-color;
+    border-radius: 4px;
+    text-transform: none;
+    width: 300px;
+    transition: opacity .3s, top .3s, visibility .3s;
+    visibility: hidden;
+    cursor: default;
+    box-shadow: $liberbee-box-shadow4;
+    color: $liberbee-slate-color;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    z-index: 2;
+  }
+}
+
+.hint-is-visible {
+  .hint--content {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+}

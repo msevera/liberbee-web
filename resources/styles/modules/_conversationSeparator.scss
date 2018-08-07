@@ -1,0 +1,25 @@
+.conversationSeparator {
+  color: $liberbee-light-blue-grey-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    height: 1px;
+    background: $liberbee-light-blue-grey-color;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+  }
+
+  .conversationSeparator--content {
+    border: 1px solid $liberbee-light-blue-grey-color;
+    border-radius: 80px;
+    font-size: 12px;
+    padding: 0 15px;
+    background: #fff;
+  }
+}

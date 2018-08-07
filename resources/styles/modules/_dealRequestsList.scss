@@ -1,0 +1,19 @@
+.dealRequestsList {
+  border-top: 1px solid $liberbee-light-blue-grey-color;
+  .dealRequestsList--title {
+    padding: 10px 10px 0 15px;
+  }
+
+  .dealRequestsList--content {
+
+  }
+
+  .dealRequestsList--empty {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: $liberbee-warm-grey-color;
+  }
+}

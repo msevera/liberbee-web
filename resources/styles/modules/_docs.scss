@@ -1,0 +1,20 @@
+.docs {
+  ol, ul {
+    padding: 0;
+  }
+
+  ol {
+    list-style-position: inside;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
+  div > ul{ margin-top: 5px;}
+}
+
+.docs--noteLabel{
+  text-transform: uppercase;
+  font-weight: 600;
+}

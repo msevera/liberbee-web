@@ -1,0 +1,128 @@
+.createReview {
+  padding: 0 25px;
+}
+
+.creteReview-highlight {
+  padding: 25px 25px;
+  background: $liberbee-lightgrey4-color;
+  border-radius: 4px;
+  margin-bottom: 35px;
+
+  .createReview--body {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.createReview--headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.createReview--bookRating {
+  margin-right: 20px;
+}
+
+.createReview--user {
+  margin-right: 30px;
+
+  .createReview--header {
+    display: none;
+  }
+}
+
+.createReview--content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.createReview--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createReview--body {
+  flex: 1;
+}
+
+.createReview--header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.createReview--text {
+  .txt {
+    height: 150px;
+  }
+}
+
+.createReview--title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.createReview--remove {
+  width: 16px;
+  height: 19px;
+  background-image: url(/img/icons/remove.svg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@include media-breakpoint-down(sm) {
+  .createReview--remove{
+    width: 16px;
+    height: 19px;
+    background-image: url('/img/icons/remove.svg');
+    cursor: pointer;
+  }
+
+  .createReview--user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 0;
+    width: 100%;
+
+    .createReview--header {
+      display: flex;
+      flex: 1;
+      margin-bottom: 0;
+      margin-left: 15px;
+
+      .createReview--headerLeft{
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  .createReview--body {
+    width: 100%;
+    .createReview--header {
+      display: none;
+    }
+  }
+
+  .createReview--content {
+    flex-direction: column;
+  }
+
+  .createReview--footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+
+    > * {
+      flex-direction: column-reverse;
+      display: flex;
+      width: 100%;
+    }
+
+  }
+}

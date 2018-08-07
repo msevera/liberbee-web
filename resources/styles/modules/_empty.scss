@@ -1,0 +1,77 @@
+.empty{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  img {
+    width: 250px;
+    height: 160px;
+  }
+}
+
+.empty-small {
+  .empty--primaryMessage{
+    font-size: 24px;
+  }
+
+  .empty--secondaryMessage {
+    font-size: 16px;
+    margin-top: 7px;
+  }
+}
+
+.empty-tiny {
+  .empty--primaryMessage{
+    font-size: 21px;
+  }
+
+  .empty--secondaryMessage {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+.empty-secondary {
+  .empty--primaryMessage, .empty--secondaryMessage{
+    color: $liberbee-lightgrey1-color;
+  }
+}
+
+
+.empty--primaryMessage {
+  font-size: 28px;
+  color: $liberbee-slate2-color;
+  margin-top: 15px;
+}
+
+.empty--secondaryMessage {
+  font-size: 18px;
+  color: $liberbee-steel-color;
+  margin-top: 2px;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .empty{
+    img {
+      width: 200px;
+    }
+  }
+
+  .empty-small .empty--primaryMessage, .empty--primaryMessage {
+    font-size: 20px;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .empty-small .empty--primaryMessage, .empty--primaryMessage {
+    font-size:16px;
+  }
+
+  .empty-small .empty--secondaryMessage, .empty--secondaryMessage {
+    font-size: 14px;
+  }
+}

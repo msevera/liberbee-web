@@ -1,0 +1,42 @@
+.readMore {
+  position: relative;
+}
+
+.readMore-reviewHighlight {
+  .readMore--action {
+    background: $liberbee-lightgrey4-color;
+    box-shadow: -4px 0px 22px 1px $liberbee-lightgrey4-color;
+  }
+}
+
+.readMore-expanded {
+  .readMore--action {
+    bottom: -5px;
+  }
+}
+
+.readMore--content {
+  position: relative;
+  overflow: hidden;
+}
+
+.readMore--action {
+  cursor: pointer;
+  border: none;
+  color: $liberbee-link-color;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  background: #fff;
+  padding: 0 10px;
+  box-shadow: -4px 0px 22px 1px #fff;
+  display: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.readMore--action-is-visible {
+  display: block;
+}

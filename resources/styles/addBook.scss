@@ -1,0 +1,10 @@
+@import './modules/addBookManually';
+
+.addBook{
+  background: lightcoral;
+}
+
+.addBook--result{
+  display: flex;
+  flex-wrap: wrap;
+}

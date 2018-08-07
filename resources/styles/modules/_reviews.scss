@@ -1,0 +1,114 @@
+.reviews {
+
+}
+
+.reviews--status {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .reviews--statusTitle {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .reviews--statusActions {
+
+  }
+
+  .reviews--count {
+    color: $liberbee-accent-color;
+  }
+}
+
+.reviews--top {
+
+}
+
+.reviews--createReview {
+  margin-bottom: 25px;
+}
+
+.reviews--items {
+  margin-top: 25px;
+  .reviews--itemsActions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+  }
+
+  .reviews--itemsActionsLeft, reviews--itemsActionsRight {
+    display: flex;
+    align-items: center;
+  }
+
+  .reviews--itemsActionsLeft {
+    > * {
+      margin-right: 35px;
+    }
+  }
+
+  .reviews--itemsContent {
+
+  }
+}
+
+.reviews--item {
+  margin-bottom: 25px;
+
+  .createReview--body {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $liberbee-lightgrey4-color;
+  }
+
+  &:last-child {
+    .review--body {
+      border-bottom: none;
+    }
+
+    .createReview--body {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .reviews--status {
+    flex-direction: column;
+    text-align: center;
+    .reviews--statusTitle {
+      font-size: 15px;
+    }
+  }
+
+  .reviews-has-items{
+    .reviews--status{
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .reviews--items {
+    .reviews--itemsActionsLeft {
+      flex-direction: column;
+      align-items: flex-start;
+
+      > * {
+        margin-right: 0;
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .reviews--itemsActions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.keywordsSelector {
+  width: 100%;
+}
+
+.keywordsSelector-is-disabled{
+  .keywordsSelector--itemValue{
+    border: none;
+  }
+}
+
+
+.keywordsSelector--content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keywordsSelector--item {
+  flex: 0 50%;
+  padding: 0 15px 0 0;
+  margin-bottom: 15px;
+}
+
+.keywordsSelector--itemActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3px;
+  color: $liberbee-steel-color;
+}
+
+.keywordsSelector--actions {
+    margin-bottom: 10px;
+}
+
+.keywordsSelector--itemValue{
+  margin-bottom: 5px;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dotted $liberbee-cloudy-blue2-color;
+  padding: 0 5px 0 0;
+
+  label {
+    color: $liberbee-warm-grey-color;
+  }
+}
+
+.keywordsSelector--lang {
+  display: inline-block;
+  width: 25px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.keywordsSelector--empty {
+  color: $liberbee-warm-grey-color;
+}

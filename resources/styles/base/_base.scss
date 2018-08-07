@@ -1,0 +1,19 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: $liberbee-primary-color;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+a{
+  color: $liberbee-link-color;
+}
+
+input:-webkit-autofill { box-shadow:0 0 0 500px white inset; }

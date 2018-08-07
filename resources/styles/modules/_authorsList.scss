@@ -1,0 +1,14 @@
+.authorsList {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+
+  a{
+    color: $liberbee-deep-blue-color;
+  }
+}
+
+.authorsList-multi{
+  white-space: normal;
+}

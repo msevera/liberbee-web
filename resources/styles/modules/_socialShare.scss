@@ -1,0 +1,31 @@
+.socialShare{
+  display: flex;
+  align-items: center;
+}
+
+.socialShare--text {
+  color: $liberbee-steel2-color;
+}
+
+.socialShare--content {
+  display: flex;
+  align-items: center;
+
+  .socialShare--item {
+    margin-left: 15px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 3px 24px rgba(0,0,0,.10);
+    border-radius: 100%;
+    background-size: 100% 100%;
+  }
+
+  .socialShare--facebook{
+    background-image: url('/img/icons/social-facebook-outline.svg');
+  }
+
+  .socialShare--twitter {
+    background-image: url('/img/icons/social-twitter-outline.svg');
+  }
+}

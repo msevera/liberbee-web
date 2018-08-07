@@ -1,0 +1,55 @@
+input[type="radio"] {
+  display: none;
+  + label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    color: $liberbee-steel-color;
+    &:before {
+      content: "";
+      position: relative;
+      margin-right: 10px;
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background: url('/img/icons/radio-off.svg') no-repeat;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &:checked + label {
+    // todo: mike, change to bold in filter, please)
+    //font-weight: $font-bold;
+    &:before {
+      background: url('/img/icons/radio.svg') no-repeat;
+    }
+  }
+  &[disabled] + label {
+    color: #888;
+    &:before {
+      //@include sharedIcon(icon-checkboxdisabled-darkgrey-14x14);
+    }
+    &:hover {
+      cursor: auto;
+    }
+  }
+  &:checked[disabled] + label {
+    color: #888;
+    &:before {
+      background: url('/img/icons/radio-disabled.svg') no-repeat;
+    }
+  }
+}
+
+.radio-error {
+  input[type="radio"] {
+    + label {
+      &:before {
+        border: solid 1px $liberbee-accent-color;
+        border-radius: 100%;
+      }
+    }
+  }
+}

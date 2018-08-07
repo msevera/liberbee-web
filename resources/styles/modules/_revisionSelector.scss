@@ -1,0 +1,54 @@
+.revisionSelector {
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  box-shadow: $liberbee-box-shadow2;
+  padding: 10px;
+}
+
+.revisionSelector-is-fixed {
+  width: 350px;
+  position: fixed;
+}
+
+.revisionSelector--item {
+  border-bottom: solid 2px $liberbee-lightgrey1-color;
+  padding: 10px;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.revisionSelector--item-is-selected {
+    color: $liberbee-accent-color;
+    background: $liberbee-light-pink-color;
+  }
+}
+
+
+.revisionSelector--info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.revisionSelector--actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+  > * {
+    margin-left: 15px;
+  }
+}
+
+.revisionSelector--published {
+  color: $liberbee-lend-color;
+  font-size: 12px;
+}
+
+
+.revisionSelector--updated {
+  color: $liberbee-giveaway-color;
+  font-size: 12px;
+}

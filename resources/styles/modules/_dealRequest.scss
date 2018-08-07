@@ -1,0 +1,82 @@
+.dealRequest {
+  display: flex;
+  flex-direction: column;
+}
+
+.dealRequest--item {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.dealRequest--title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dealRequest--condition {
+  margin-top: 8px;
+}
+
+
+.dealRequest--deal {
+  margin-top: 8px;
+}
+
+
+.dealRequest--data {
+  margin-left: 15px;
+  flex: 1;
+  min-width: 0;
+}
+
+.dealRequest--cover {
+  height: 120px;
+  width: 80px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    //border: solid 1px $liberbee-lightgrey2-color;
+  }
+}
+
+.dealRequest--cover-is-empty {
+  background: $liberbee-lightgrey2-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $liberbee-warm-grey-color;
+}
+
+
+.dealRequest--status {
+  margin-top: 8px;
+  color: $liberbee-warm-grey-color;
+}
+
+.dealRequest--actions {
+  margin-top: 16px;
+  color: $liberbee-warm-grey-color;
+}
+
+.dealRequest--actions-is-link {
+  margin-top: 8px;
+}
+
+.dealRequest--heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .dealRequest--date {
+    margin-right: 30px;
+    font-size: 14px;
+    color: $liberbee-warm-grey-color;
+  }
+}

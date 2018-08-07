@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+}
+
+.pagination--item {
+  margin-left: 5px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.pagination--item-is-active {
+  > * {
+    border: none;
+  }
+}

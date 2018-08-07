@@ -1,0 +1,27 @@
+.resendEmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resendEmail--content{
+  margin-bottom: 10px;
+}
+
+.resendEmail--emailAddress {
+  font-size: 18px;
+}
+
+.resendEmail--statusResent{
+  color: $liberbee-lend-color;
+}
+
+.resendEmail--action {
+  font-size: 18px;
+}
+
+@include media-breakpoint-down(sm) {
+  .resendEmail--emailAddress {
+    font-size: 16px;
+  }
+}

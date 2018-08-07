@@ -1,0 +1,44 @@
+.bookActions {
+  width: 100%;
+  box-shadow: $liberbee-box-shadow2;
+  padding: 10px;
+}
+
+.bookActions--item {
+  margin-bottom: 10px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.bookActions--buy {
+  span{
+    margin-right: 10px;
+  }
+}
+
+@include media-breakpoint-down(md){
+  .bookActions {
+    display: flex;
+    align-items: center;
+  }
+
+  .bookActions--item {
+    margin-bottom: 0;
+    margin-right: 10px;
+    flex: 1;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .bookActions--sell{
+    margin-bottom: 0;
+  }
+}
+
+

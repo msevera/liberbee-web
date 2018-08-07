@@ -1,0 +1,104 @@
+@import '../base/zindex';
+
+.popupFull {
+  background: $liberbee-lightgrey4-color;
+  position: absolute;
+  bottom: 0;
+  top: -65px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s, top .3s;
+  z-index: z($elements, fullPopup);
+  visibility: hidden;
+
+  .popupFull--bg {
+    background: $liberbee-lightgrey4-color;
+  }
+
+  .popupFull--container {
+    position: relative;
+  }
+
+  .popupFull--close {
+    background: url('/img/icons/clear.svg');
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
+    right: 0px;
+    top: 50px;
+    position: absolute;
+    cursor: pointer;
+    z-index: z($elements, fullPopupClose);
+  }
+}
+
+.popupFull-is-visible {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+
+.popupFull-zAuto {
+  z-index: auto;
+}
+
+.popupFull-zMax {
+  z-index: z($elements, fullPopupZMax);
+}
+
+.popupFull-fixed {
+  position: fixed;
+  overflow: auto;
+  top: 85px;
+}
+
+@include media-breakpoint-down(lg) {
+  .popupFull {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .popupFull {
+    .popupFull--close {
+      top: 15px;
+      right: -10px;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .popupFull {
+    top: 0;
+
+    .popupFull--close {
+      top: -37px;
+      right: -67px;
+    }
+
+    &.popupFull-addBook {
+      .popupFull--close {
+        top: 15px;
+        right: -5px;
+        width: 15px;
+        height: 15px;
+        background-size: 100% 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .popupFull {
+    .popupFull--close {
+      right: 15px;
+      top: 15px;
+      width: 15px;
+      height: 15px;
+      background-size: 100% 100%;
+    }
+  }
+}
+
+

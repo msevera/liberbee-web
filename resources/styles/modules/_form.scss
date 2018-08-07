@@ -1,0 +1,187 @@
+@import "../base/zindex";
+
+.form {
+  font-family: 'Roboto', sans-serif;
+}
+
+.form--label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form--help {
+  color: $liberbee-bluey-grey-color;
+  cursor: pointer;
+}
+
+.form--hintIcon {
+  display: inline-block;
+  cursor: pointer;
+
+  &.form--hintIconQuestion {
+    background: url('/img/icons/question.svg');
+    width: 14px;
+    height: 14px;
+    top: 1px;
+    position: absolute;
+    right: -23px;
+  }
+
+  > * {
+    position: absolute;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    padding: 10px;
+    border: 1px solid $liberbee-lightgrey2-color;
+    border-radius: 4px;
+    text-transform: none;
+    width: 300px;
+    transition: opacity .3s, top .3s, visibility .3s;
+    visibility: hidden;
+    cursor: default;
+    box-shadow: $liberbee-box-shadow4;
+    z-index: z($elements, base);
+  }
+
+  &.form--hint-is-visible {
+    > * {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+    }
+  }
+}
+
+.form--group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  .form--label {
+    label {
+      position: relative;
+      font-size: 12px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      display: inline-block;
+      width: auto;
+      color: $liberbee-slate-color;
+    }
+  }
+}
+
+
+
+.form--group-is-required {
+  .form--label {
+    label {
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        top: 1px;
+        right: -7px;
+        position: absolute;
+        background: $liberbee-accent-color;
+      }
+    }
+  }
+
+  .form--hintIcon {
+    right: -30px;
+  }
+}
+
+.form--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form--errors, .form--success {
+  font-size: 14px;
+  margin-top: 5px;
+  span {
+    &:first-child {
+      display: block;
+    }
+    display: none;
+  }
+}
+
+.form--errors {
+  color: $liberbee-accent-color;
+}
+
+.form--success {
+  color: $liberbee-lend-color;
+}
+
+.form--h {
+  display: flex;
+  align-items: flex-start;
+
+  > * {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.form--noMargin {
+  margin-bottom: 0;
+}
+
+.form--marginBottom {
+  margin-bottom: 20px;
+}
+
+.form--marginTop {
+  margin-top: 20px;
+}
+
+.form--grow {
+  flex-grow: 1;
+}
+
+.form--suffix {
+  margin-left: 5px;
+}
+
+.form--content {
+  display: flex;
+  align-items: center;
+}
+
+.form--contentSuccess, .form--contentError {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    right: 13px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.form--contentSuccess {
+  &:after {
+    background: url(/img/icons/notification-successInColor.svg) no-repeat;
+  }
+}
+
+.form--contentError {
+  &:after {
+    background: url(/img/icons/notification-errorInColor.svg) no-repeat;
+  }
+}
+
+.form--action {
+  align-self: flex-end;
+  margin-bottom: 28px;
+}
+

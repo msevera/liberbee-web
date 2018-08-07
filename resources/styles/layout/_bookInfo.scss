@@ -1,0 +1,38 @@
+.l-bookInfoAdminActions {
+  margin-bottom: -35px;
+  margin-top: 15px;
+}
+
+.l-bookInfoActions {
+  min-width: 300px;
+}
+
+.l-bookInfo-pageLoader{
+  margin-top: 75px;
+}
+
+@include media-breakpoint-down(lg) {
+  .l-bookInfoDescription{
+    margin-top: 40px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .l-bookInfoAdminActions{
+    margin-bottom: 0;
+  }
+
+  .l-bookInfoActions {
+    margin-top: 25px;
+  }
+
+  .l-bookInfoDescription{
+    margin-top: 20px;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .l-bookInfoDescription{
+    margin-top: 40px;
+  }
+}

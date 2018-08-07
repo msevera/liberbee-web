@@ -1,0 +1,28 @@
+.adminActions {
+  padding: 10px;
+  background: $liberbee-light-pink-color;
+  display: flex;
+  border-radius: 2px;
+}
+
+.adminActions--item {
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .adminActions {
+    flex-direction: column-reverse;
+
+    .adminActions--item {
+      margin-right: 0;
+      margin-top: 5px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}

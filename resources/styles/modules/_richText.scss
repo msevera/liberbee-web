@@ -1,0 +1,20 @@
+.richText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .txt {
+    height: auto;
+    min-height: 44px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+}
+
+.richText--placeholder {
+  margin-top: 14px;
+  color: $liberbee-cloudy-blue-color;
+  position: absolute;
+  margin-left: 15px;
+}

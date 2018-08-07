@@ -1,0 +1,18 @@
+.l-userProfile{
+  height: 200px;
+}
+
+.l-userBooksSocialShare{
+  margin-top: -3px;
+}
+
+.l-userBookActions{
+  margin-top: 35px;
+}
+
+@include media-breakpoint-down(xs) {
+  .l-userProfile{
+    height: auto;
+    padding: 20px 15px;
+  }
+}

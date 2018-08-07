@@ -1,0 +1,23 @@
+.popover {
+  box-shadow: $liberbee-box-shadow5;
+  border-radius: 4px;
+}
+
+.popover-highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 3px solid $liberbee-accent-color;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid $liberbee-accent-color;
+    right: 20px;
+    transform: translateY(-8px);
+  }
+}

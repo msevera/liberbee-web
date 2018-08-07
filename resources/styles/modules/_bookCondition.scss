@@ -1,0 +1,77 @@
+@import "../base/zindex";
+
+.bookCondition {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.bookCondition-normal{
+  width: 250px;
+}
+
+.bookCondition--label {
+  color: $liberbee-warm-grey-color;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.bookCondition--state {
+  .bookCondition-new & {
+    color: $liberbee-new-color;
+  }
+
+  .bookCondition-excellent & {
+    color: $liberbee-excellent-color;
+  }
+
+  .bookCondition-good & {
+    color: $liberbee-good-color;
+  }
+
+  .bookCondition-notBad & {
+    color: $liberbee-notBad-color;
+  }
+}
+
+.bookCondition--comment {
+  display: inline-block;
+  cursor: pointer;
+  background: url(/img/icons/comment.svg);
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  right: -15px;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.bookCondition--commentContent {
+  left: 0;
+  width: 100%;
+  text-align: left;
+  color: #9b9b9b;
+  font-size: 13px;
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  opacity: 0;
+  padding: 10px 15px;
+  border: 1px solid $liberbee-lightgrey2-color;
+  border-radius: 4px;
+  text-transform: none;
+  transition: opacity .3s, top .3s, visibility .3s;
+  visibility: hidden;
+  cursor: default;
+  box-shadow: $liberbee-box-shadow4;
+  z-index: z($elements, bookConditionPopover);
+
+  &.bookCondition--commentContent-is-visible {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+}
+
+
+

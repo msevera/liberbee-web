@@ -1,0 +1,59 @@
+.l-empty-activeBooks{
+  margin-top: 100px
+}
+
+.l-empty-pendingBooks{
+  margin-top: 100px
+}
+
+.l-empty-favoriteBooks{
+  margin-top: 150px
+}
+
+.l-empty-draftBooks{
+  margin-top: 150px
+}
+
+.l-empty-indexSearch{
+  margin-top: 150px
+}
+
+.l-empty-bookInfo{
+  margin-top: 0;
+}
+
+.l-empty-addBook{
+  margin-top: 0;
+}
+
+.l-empty-associateBook{
+  margin-top: 100px;
+}
+
+.l-empty-messages{
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+  padding-top: 200px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .l-empty-indexSearch{
+    margin-top: 40px
+  }
+
+  .l-empty-addBook{
+    margin-top: 25px;
+  }
+
+  .l-empty-activeBooks, .l-empty-pendingBooks, .l-empty-favoriteBooks{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+  }
+}

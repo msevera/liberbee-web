@@ -1,0 +1,63 @@
+.getBook {
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+}
+
+.getBook--item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $liberbee-lightgrey2-color;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.getBook--message {
+  margin-top: 25px;
+  .txt {
+    height: 150px;
+  }
+}
+
+.getBook--remove {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: url(/img/icons/clear.svg);
+  width: 12px;
+  height: 12px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+@include media-breakpoint-down(xs) {
+  .getBook--message {
+    .txt {
+      height: 100px;
+    }
+  }
+
+  .getBook--remove{
+    display: none;
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .getBook {
+    width: 100%;
+
+    .authorsList{
+      white-space: normal;
+    }
+
+    .bookCondition{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.socialSignin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialSignin--name {
+  font-size: 18px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.socialSignin--loginWith{
+  width: 300px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}

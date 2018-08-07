@@ -1,0 +1,16 @@
+.updateInfo {
+  width: 300px;
+}
+
+.updateInfo--avatar {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@include media-breakpoint-down(sm){
+  .updateInfo {
+    width: 100%
+  }
+}

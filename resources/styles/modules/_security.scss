@@ -1,0 +1,74 @@
+.security {
+
+}
+
+.security--socials {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.security--facebook {
+  cursor: pointer;
+  &:before {
+    content: '';
+    width: 44px;
+    height: 44px;
+    background: url('/img/icons/social-facebook.svg') no-repeat;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 2px 6px 0 rgba(72, 100, 154, 0.42);
+    border-radius: 100%;
+    background-position: -6px -4px;
+    cursor: pointer;
+  }
+}
+
+.security--google {
+  cursor: pointer;
+  &:before {
+    content: '';
+    width: 44px;
+    height: 44px;
+    background: url('/img/icons/social-google.svg') no-repeat;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 2px 6px 0 rgba(219, 74, 64, 0.32);
+    border-radius: 100%;
+    background-position: -6px -4px;
+    cursor: pointer;
+  }
+}
+
+.security--policyAgreement{
+
+}
+
+@include media-breakpoint-down(sm) {
+  .security--socials{
+    height: 60px;
+    span {
+      margin-right: 20px;
+    }
+  }
+
+  .security--facebook, .security--google{
+    &:before{
+      background-size: 135%;
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .security--policyAgreement{
+    margin-bottom: 15px;
+  }
+}

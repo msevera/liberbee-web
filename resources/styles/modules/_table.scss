@@ -1,0 +1,37 @@
+.table {
+  width: 100%;
+  thead {
+    tr {
+      th {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 15px;
+        color: $liberbee-bluey-grey-color;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 5px 15px;
+        //white-space: nowrap;
+      }
+    }
+
+    .table--row-is-odd {
+      background: $liberbee-lightgrey4-color;
+    }
+  }
+}
+
+.table--center {
+  text-align: center;
+}
+
+.table--right {
+  text-align: right;
+}

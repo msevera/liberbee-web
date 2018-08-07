@@ -1,0 +1,85 @@
+.l-indexSearch {
+  height: 230px;
+}
+
+.l-indexCategories {
+  margin-top: -50px;
+}
+
+.l-indexCategoriesClose, .l-indexCategoriesBg {
+  display: none;
+}
+
+@include media-breakpoint-down(md) {
+  .l-indexCategories {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    max-width: 100%;
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    z-index: 99;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .l-categoriesContent {
+    max-width: 350px;
+    transform: translateZ(0);
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+    padding: 20px 10px;
+    box-shadow: $liberbee-box-shadow4;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .l-indexCategories-is-visible {
+    display: block;
+  }
+
+  .l-indexCategoriesClose {
+    display: block;
+    background: url('/img/icons/close.svg');
+    width: 15px;
+    height: 15px;
+    right: 19px;
+    background-size: 100% 100%;
+    top: 20px;
+    position: fixed;
+  }
+
+  .l-indexCategoriesBg {
+    display: block;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+}
+
+@include media-breakpoint-down(sm) {
+  .l-indexSearch {
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .l-categoriesContent {
+    max-width: 250px;
+    top: 0;
+  }
+}

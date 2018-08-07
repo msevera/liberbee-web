@@ -1,0 +1,106 @@
+.entitySelector {
+  width: 100%;
+}
+
+.entitySelector-is-disabled {
+  .entitySelector--item {
+    margin: 5px 0px
+  }
+
+  .entitySelector--itemContent {
+    display: flex;
+    .entitySelector--itemHeading, .entitySelector--itemValue {
+      margin-bottom: 0;
+    }
+
+    .entitySelector--itemHeading > div {
+      margin-right: 15px;
+    }
+  }
+}
+
+.entitySelector-is-disabled {
+  .entitySelector--itemValue {
+    border: none;
+  }
+}
+
+.entitySelector--content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.entitySelector--item {
+  flex: 0 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.entitySelector--itemContent {
+  flex-grow: 1;
+}
+
+.entitySelector--itemActions {
+  margin-bottom: 6px;
+  margin-left: 25px;
+  width: 110px;
+}
+
+.entitySelector--itemHeading {
+  color: $liberbee-steel-color;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+  > div {
+    margin-right: 25px;
+  }
+}
+
+.entitySelector--actions {
+  margin-bottom: 10px;
+}
+
+.entitySelector--itemValue {
+  margin-bottom: 5px;
+  cursor: text;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dotted $liberbee-cloudy-blue2-color;
+  padding: 0 5px 0 0;
+  position: relative;
+
+  .entitySelector--itemValueNotification {
+    position: absolute;
+    right: 13px;
+    width: 17px;
+    height: 17px;
+    top: 2px;
+    cursor: default;
+
+    &.entitySelector--itemValueNotificationSuccess {
+      background: url(/img/icons/notification-successInColor.svg) no-repeat;
+    }
+
+    &.entitySelector--itemValueNotificationError {
+      background: url(/img/icons/notification-errorInColor.svg) no-repeat;
+    }
+  }
+
+  label {
+    color: $liberbee-warm-grey-color;
+  }
+}
+
+.entitySelector--lang {
+  display: inline-block;
+  width: 25px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.entitySelector--empty {
+  color: $liberbee-warm-grey-color;
+}

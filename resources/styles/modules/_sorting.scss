@@ -1,0 +1,41 @@
+.sorting{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.sorting--title{
+  margin-right: 15px;
+  color: $liberbee-warm-grey-color;
+  white-space: nowrap;
+}
+
+.sorting--content{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sorting--item{
+  margin-right: 15px;
+  cursor: pointer;
+  &:last-child{
+    margin-right: 0;
+  }
+
+  &.sorting--item-is-selected{
+    color: $liberbee-accent-color;
+  }
+}
+
+
+@include media-breakpoint-down(xs){
+  .sorting--title{
+    margin-right: 10px;
+  }
+  .sorting--item{
+    margin-right: 12px;
+  }
+}

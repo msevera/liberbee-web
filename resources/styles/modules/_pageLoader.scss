@@ -1,0 +1,219 @@
+@import'../base/zindex';
+
+$thickness : 2px;
+$duration : 2500;
+$delay : $duration/6;
+$space: 1;
+
+@mixin polka($size, $dot, $base, $accent){
+  background: $base;
+  background-image: radial-gradient($accent $dot, transparent 0);
+  background-size:$size $size;
+  background-position: 0 -2.5px;
+}
+
+.pageLoader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: z($elements, pageLoader);
+}
+
+.pageLoader-absolute {
+  position: absolute;
+}
+
+.pageLoader-secondary {
+  position: absolute;
+  z-index: z($elements, pageLoader) - 1;
+}
+
+.pageLoader--spinner {
+  position: relative;
+  transform: scale(0.6);
+}
+
+.pageLoader--list {
+  margin: 0 auto;
+  width: 220px;
+  padding: 0;
+}
+
+.pageLoader--shelf {
+  width: 90%;
+  height: 10px;
+  background: $liberbee-accent-color;
+  margin-top: 3px;
+  border-radius: 3px;
+  position: relative;
+  right: -7px;
+}
+
+.pageLoader--item {
+  border-radius: 3px;
+  position: absolute;
+  top: -70px;
+  box-sizing: border-box;
+  list-style: none;
+  width: 22px;
+  height: 70px;
+  opacity: 0;
+  background-color: #fff;
+  border: $thickness solid $liberbee-accent-color;
+  transform-origin: bottom left;
+  transform: translateX(300px);
+  animation: travel #{$duration}ms linear infinite;
+
+
+  &.pageLoader--bookFirst {
+    top: -90px;
+    height: 90px;
+
+    &:before,
+    &:after {
+      content:'';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: $thickness;
+      background-color: $liberbee-accent-color;
+    }
+
+    &:after {
+      top: initial;
+      bottom: 10px;
+    }
+  }
+
+  &.pageLoader--bookSecond,
+  &.pageLoader--bookFifth {
+    &:before,
+    &:after {
+      box-sizing: border-box;
+      content:'';
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 100%;
+      height: $thickness*3.5;
+      border-top: $thickness solid $liberbee-accent-color;
+      border-bottom: $thickness solid $liberbee-accent-color;
+    }
+
+    &:after {
+      top: initial;
+      bottom: 10px;
+    }
+  }
+
+
+
+  &.pageLoader--bookFourth {
+    top: -80px;
+    height: 80px;
+
+    &:before {
+      box-sizing: border-box;
+      content:'';
+      position: absolute;
+      top: 46px;
+      left: 0;
+      width: 100%;
+      height: $thickness*3.5;
+      border-top: $thickness solid $liberbee-accent-color;
+      border-bottom: $thickness solid $liberbee-accent-color;
+    }
+  }
+
+  &.pageLoader--bookFifth {
+    top: -100px;
+    height: 100px;
+  }
+
+  &.pageLoader--bookSixth {
+    top: -90px;
+    height: 90px;
+
+    &:after {
+      box-sizing: border-box;
+      content:'';
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      height: $thickness*3.5;
+      border-top: $thickness solid $liberbee-accent-color;
+      border-bottom: $thickness solid $liberbee-accent-color;
+    }
+  }
+
+  &:nth-child(2) {
+    animation-delay: #{$delay*-1}ms;
+  }
+
+  &:nth-child(3) {
+    animation-delay: #{$delay*-2}ms;
+  }
+
+  &:nth-child(4) {
+    animation-delay: #{$delay*-3}ms;
+  }
+
+  &:nth-child(5) {
+    animation-delay: #{$delay*-4}ms;
+  }
+
+  &:nth-child(6) {
+    animation-delay: #{$delay*-5}ms;
+  }
+
+}
+
+@keyframes move {
+
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: 10px;
+  }
+
+}
+
+@keyframes travel {
+
+  0% {
+
+    transform: translateX(225px) scaleY(1);
+  }
+
+  7.5% {
+    opacity: 1;
+    transform: translateX(179.5px) scaleY(1.1);
+  }
+
+  8.8% {
+    transform: translateX(173.6px) scaleY(1);
+  }
+
+
+  83.5% {
+    transform: translateX(49.5px);
+  }
+
+  95%{
+    opacity:1;
+  }
+
+  100% {
+    transform: translateX(22px);
+  }
+
+}

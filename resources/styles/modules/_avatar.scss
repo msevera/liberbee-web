@@ -1,0 +1,109 @@
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $liberbee-beige-color;
+  font-size: 21px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.avatar-big {
+  width: 100px;
+  height: 100px;
+  font-size: 28px;
+}
+
+.avatar-small {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.avatar-middle {
+  width: 42px;
+  height: 42px;
+  font-size: 14px;
+}
+
+.avatar-active {
+  background-color: rgba(255, 90, 96, 0.2);
+}
+
+.avatar--empty {
+  width: 80%;
+  height: 90%;
+  background: $liberbee-lightgrey2-color;
+  color: $liberbee-warm-grey-color;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-upload {
+  border: 2px dotted $liberbee-accent-color;
+  border-radius: 100%;
+  color: $liberbee-accent-color;
+  background-color: rgba(255, 90, 96, 0.06);
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+}
+
+.avatar-upload.avatar-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  text-align: center;
+  padding: 30px 35px
+}
+
+.avatar--uploadAction {
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+.avatar--drag {
+  background: url('/img/icons/drag.svg');
+  width: 60px;
+  height: 62px;
+  margin: auto auto 20px auto;
+}
+
+.avatar-full {
+  width: 100%;
+  height: 100%;
+}
+
+@include media-breakpoint-down(sm){
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .avatar-big {
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+  }
+
+  .avatar-sm-full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .avatar-sm-60{
+    width: 60px;
+    height: 60px;
+  }
+}

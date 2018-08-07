@@ -1,0 +1,60 @@
+.lineSelector {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.lineSelector--item {
+  display: flex;
+  width: 100%;
+
+  &:last-child {
+    width: auto;
+  }
+}
+
+.lineSelector--point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .lineSelector--dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: $liberbee-warm-grey-color;
+  }
+
+  .lineSelector--text {
+    font-size: 12px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15px;
+  }
+}
+
+.lineSelector--line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid grey;
+  position: relative;
+  top: 3px;
+}
+
+.lineSelector--item-is-selected {
+  .lineSelector--dot:before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: green;
+    position: absolute;
+    z-index: -1;
+    transform: translate3d(-6px, -6px, 0);
+  }
+}

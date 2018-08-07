@@ -1,0 +1,16 @@
+.buttonSelector{
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.buttonSelector-is-empty{
+  justify-content: space-between;
+  .buttonSelector--item{
+    color: $liberbee-warm-grey-color;
+  }
+}
+
+.buttonSelector--action{
+  margin-left: 25px;
+}

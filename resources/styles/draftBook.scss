@@ -1,0 +1,39 @@
+@import './base/variables';
+@import './base/mixins';
+@import './modules/coverUpload';
+@import './modules/bookActions';
+@import './modules/revisionSelector';
+@import './modules/createEditAuthor';
+@import './modules/createEditPublisher';
+@import './modules/categoriesTree';
+@import './modules/buttonSelector';
+@import './modules/keywordsSelector';
+@import './modules/entitySelector';
+
+.draftInfo {
+  .draftInfo--title, .draftInfo--book{
+    font-weight: 600;
+  }
+
+  .draftInfo--title, .draftInfo--assignee {
+    display: flex;
+  }
+
+  .draftInfo--published {
+    background: #3bb449;
+    padding: 1px 10px;
+    color: #fff;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .draftInfo--remove{
+    background: url('/img/icons/remove.svg');
+    width: 16px;
+    height: 19px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+}

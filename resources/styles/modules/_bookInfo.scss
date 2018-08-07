@@ -1,0 +1,180 @@
+.bookInfo {
+}
+
+.bookInfo--cover {
+  height: 245px;
+  width: 210px;
+  text-align: center;
+  position: relative;
+}
+
+.bookInfo--favorites {
+  display: none;
+}
+
+.bookInfo--shelf {
+  position: absolute;
+  height: 14px;
+  width: 100%;
+  box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transform: translate3d(0, 0, 0);
+
+  &:before {
+    content: "";
+    background-image: linear-gradient(to bottom, #ebebeb, #ffffff);
+    top: 0;
+    position: absolute;
+    bottom: 0px;
+    right: 2px;
+    left: 4px;
+    transform: translateY(100%) perspective(80px) rotateX(-20deg);
+  }
+}
+
+.bookInfo--title {
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.bookInfo--author {
+}
+
+.bookInfo--language {
+}
+
+.bookInfo--rating {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+
+  .bookInfo--ratingValue {
+    margin-right: 7px;
+  }
+
+  .bookInfo--ratingVotesCount{
+    margin-right: 15px;
+    color: $liberbee-warm-grey-color;
+  }
+
+  .bookInfo--ratingPart{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.bookInfo--publisher {
+  display: flex;
+
+  .bookInfo--publishDate {
+    margin-left: 15px;
+  }
+}
+
+.bookInfo--ratingSeparator{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@include media-breakpoint-down(lg){
+  .bookInfo--rating{
+    flex-direction: column;
+    align-items: flex-start;
+
+    .bookInfo--ratingSeparator{
+      display: none;
+    }
+
+    .bookInfo--ratingReviewsPart{
+      margin-top: 10px;
+      margin-left: 3px;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .bookInfo--cover {
+    height: 185px;
+    width: 150px;
+  }
+
+  .bookInfo--title {
+    font-size: 22px;
+    width: 90%;
+  }
+
+  .bookInfo--publisher {
+    flex-direction: column;
+
+    .bookInfo--publishDate {
+      margin-left: 0;
+    }
+  }
+
+  .bookInfo--favorites {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 3px;
+    box-shadow: -4px 0 30px 15px #fff;
+
+    .icon {
+      min-width: 22px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .bookInfo--rating{
+    flex-direction: row;
+    align-items: center;
+
+    .bookInfo--ratingSeparator{
+      display: block;
+    }
+
+    .bookInfo--ratingReviewsPart{
+      margin-top: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .bookInfo--cover {
+    height: 145px;
+    width: 125px;
+  }
+
+  .bookInfo--title {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .bookInfo--description {
+    margin-top: 20px;
+  }
+
+  .bookInfo--rating {
+    .bookInfo--ratingVotesCount{
+      margin-right: 0;
+    }
+  }
+
+  .bookInfo--ratingMobile{
+    margin-top: 0;
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .bookInfo--rating{
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    .bookInfo--ratingPart{
+      margin-bottom: 10px;
+    }
+  }
+}

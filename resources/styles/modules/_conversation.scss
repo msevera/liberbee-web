@@ -1,0 +1,28 @@
+.conversation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.conversation--content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .conversation--item {
+    margin-bottom: 25px;
+
+    &:first-child {
+      margin-top: 30px;
+    }
+  }
+
+  .conversation--itemPadded {
+    padding: 0 30px;
+  }
+}
+
+.conversation--actions {
+
+}

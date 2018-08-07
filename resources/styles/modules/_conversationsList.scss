@@ -1,0 +1,15 @@
+.conversationsList {
+  background: $liberbee-pale-grey-color;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .conversationsList--content {
+    //height: 100%;
+  }
+
+  .conversationsList--stub {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid $liberbee-pale-grey2-color;
+  }
+}

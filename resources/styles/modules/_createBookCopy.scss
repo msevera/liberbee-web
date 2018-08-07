@@ -1,0 +1,30 @@
+.createBookCopy {
+  width: 320px;
+
+  .createBookCopy--priceTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .createBookCopy--price {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .createBookCopy--considerSwapping {
+    margin-bottom: 7px;
+  }
+
+  .createBookCopy--condition {
+    display: flex;
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .createBookCopy {
+    width: 100%;
+    .createBookCopy--condition{
+      display: none;
+    }
+  }
+}

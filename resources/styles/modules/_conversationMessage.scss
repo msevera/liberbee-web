@@ -1,0 +1,128 @@
+.conversationMessage {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.conversationMessage-recipient {
+  align-items: flex-start;
+}
+
+.conversationMessage--content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.conversationMessage--item {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conversationMessage--text {
+  border-radius: 3px;
+  padding: 10px 15px;
+  position: relative;
+  color: $liberbee-purplish-grey-color;
+  font-size: 14px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  height: 100%;
+  word-break: break-word;
+}
+
+.conversationMessage--meta {
+  width: 50px;
+  min-width: 50px;
+}
+
+.conversationMessage-owner {
+  .conversationMessage--text {
+    background: #fff;
+    box-shadow: 0 2px 13px 3px rgba(103, 144, 183, 0.11);
+
+    &.conversationMessage--textArrow:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 5px solid #fff;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      right: 0;
+      transform: translateX(100%);
+      top: 15px;
+    }
+  }
+
+  .conversationMessage--meta {
+    margin-left: 20px;
+  }
+}
+
+.conversationMessage-recipient {
+  .conversationMessage--content{
+    flex-direction: row;
+  }
+
+  .conversationMessage--text {
+    background: $liberbee-duck-egg-blue-color;
+
+    &.conversationMessage--textArrow:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-right: 5px solid $liberbee-duck-egg-blue-color;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      left: 0;
+      transform: translateX(-100%);
+      top: 15px;
+    }
+  }
+
+  .conversationMessage--meta {
+    margin-right: 20px;
+  }
+}
+
+.conversationMessage--time {
+  color: $liberbee-warm-grey-color;
+  font-size: 11px;
+}
+
+.conversationMessage--user {
+  margin-bottom: 5px;
+}
+
+.conversationMessage--status {
+  color: $liberbee-lightgrey1-color;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 11px;
+  transition: color 1s;
+
+  button {
+    margin-right: -13px;
+  }
+
+  &.conversationMessage--unsent {
+    color: $liberbee-lightgrey1-color;
+  }
+
+  &.conversationMessage--seen {
+    color: $liberbee-warm-grey-color;
+
+  }
+
+  &.conversationMessage--sent {
+    color: $liberbee-lightgrey1-color;
+  }
+
+  &.conversationMessage--delivered {
+    color: $liberbee-lightgrey1-color;
+  }
+}
+

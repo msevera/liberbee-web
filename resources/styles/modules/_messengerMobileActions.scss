@@ -1,0 +1,45 @@
+@import "../base/zindex";
+
+.messengerMobileActions{
+  display: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .messengerMobileActions {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    padding: 10px 15px;
+    z-index: z($elements, messengerMobileActions);
+  }
+
+  .messengerMobileActions--item {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 3px 24px rgba(0,0,0,.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before{
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .messengerMobileActions--conversationsList:before {
+    content: ' ';
+    background-image: url('/img/icons/conversations.svg');
+  }
+
+  .messengerMobileActions--userInfo:before {
+    content: ' ';
+    background-image: url('/img/icons/info.svg');
+  }
+}

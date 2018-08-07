@@ -1,0 +1,14 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+node_modules
+public/js
+public/css
+app/build
+node_modules
+.DS_Store
+dist
+*.log
+coverage
+.idea
+manifest.json
+*.log.*
+env.json

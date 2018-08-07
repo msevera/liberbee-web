@@ -1,0 +1,42 @@
+.collapsible {
+  display: flex;
+  flex-direction: column;
+
+  .collapsible__trigger {
+    //border-top: 1px solid $liberbee-light-blue-grey-color;
+    color: $liberbee-brownish-grey-color;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+      content: ' ';
+      display: inline-block;
+      right: 15px;
+      width: 12px;
+      height: 6px;
+      background: url('/img/icons/arrow-down-light.svg') no-repeat;
+      margin-left: 12px;
+      position: absolute;
+    }
+
+    &.is-open {
+      border-bottom: 1px solid $liberbee-light-blue-grey-color;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      background: $liberbee-light-pink-color;
+    }
+  }
+
+  .collapsible__contentInner {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,71 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.icon-heart {
+  width: 20px;
+  min-width: 20px;
+  height: 17px;
+  background-image: url('/img/icons/heart.svg');
+}
+
+.icon-heartFull {
+  min-width: 20px;
+  width: 20px;
+  height: 17px;
+  background-image: url('/img/icons/heart-full.svg');
+}
+
+.icon-book {
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
+  background-image: url('/img/icons/book.svg');
+}
+
+.icon-send {
+  width: 22px;
+  height: 22px;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  background-image: url('/img/icons/send.svg');
+}
+
+.icon-message {
+  width: 18px;
+  height: 18px;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  background-image: url('/img/icons/messages.svg');
+  position: relative;
+}
+
+.icon-message-has-messages {
+  &:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    top: -3px;
+    right: -3px;
+    position: absolute;
+    background: $liberbee-accent-color;
+  }
+}
+
+.icon-messageHighlight {
+  width: 18px;
+  height: 18px;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  background-image: url('/img/icons/messages-highlight.svg');
+}
+
+.icon-remove {
+  width: 16px;
+  height: 19px;
+  background-size: 100% 100%;
+  margin-left: 5px;
+  background-image: url('/img/icons/remove.svg');
+}

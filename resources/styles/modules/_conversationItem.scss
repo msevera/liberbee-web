@@ -1,0 +1,147 @@
+.conversationItem {
+  background: $liberbee-pale-grey-color;
+  display: flex;
+  height: 100px;
+  border-bottom: 1px solid $liberbee-pale-grey2-color;
+  border-right: 1px solid $liberbee-pale-grey2-color;
+  padding-right: 15px;
+  cursor: pointer;
+
+  /* &:first-child {
+     border-top: 1px solid $liberbee-pale-grey2-color;
+   }*/
+
+  &.conversationItem-noRightBorder {
+    border-right: none;
+  }
+
+  .conversationItem--highlight, .conversationItem--avatar, .conversationItem--text {
+    margin-right: 15px;
+  }
+
+  .conversationItem--avatar {
+    align-self: center;
+    position: relative;
+
+    .conversationItem--count {
+      width: 18px;
+      height: 18px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $liberbee-accent-color;
+      font-size: 12px;
+      color: #fff;
+      position: absolute;
+      bottom: -4px;
+      right: -4px;
+    }
+  }
+
+  .conversationItem--highlight {
+    min-width: 6px;
+  }
+
+  .conversationItem--content {
+    display: flex;
+    min-width: 0;
+    align-self: center;
+    flex-grow: 1;
+    flex-direction: column;
+
+    > .conversationItem--meta{
+      display: none;
+    }
+  }
+
+  .conversationItem--text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .conversationItem--meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 15px 0;
+    width: 100px;
+
+    .conversationItem--attention {
+      padding: 0 10px;
+      color: #fff;
+      background: $liberbee-accent-color;
+      border-radius: 100px;
+      font-size: 12px;
+      text-align: center;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .conversationItem--date {
+      font-size: 12px;
+      color: $liberbee-warm-grey-color;
+    }
+  }
+
+  .conversationItem--text {
+    min-width: 0;
+  }
+
+  .conversationItem--title, .conversationItem--message {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 100%;
+    white-space: nowrap;
+  }
+
+  .conversationItem--title {
+    color: $liberbee-brownish-grey-color;
+    font-size: 16px;
+  }
+
+  .conversationItem--message {
+    color: $liberbee-warm-grey-color;
+    font-size: 14px;
+  }
+}
+
+.conversation-is-unseen {
+  .conversationItem--title, .conversationItem--message {
+    font-weight: 600;
+  }
+
+  .conversationItem--message {
+    color: $liberbee-primary-color;
+  }
+}
+
+.conversationItem-is-selected {
+  background: #fff;
+  border-right-color: #fff;
+
+  .conversationItem--highlight {
+    background: $liberbee-accent-color;
+    box-shadow: 0 4px 10px 0 rgba(255, 96, 103, 0.51);
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .conversationItem {
+    .conversationItem--content {
+      > .conversationItem--meta {
+        display: flex;
+        padding: 0;
+        align-items: flex-start;
+        margin-top: 3px;
+      }
+    }
+
+    > .conversationItem--meta{
+      display: none;
+    }
+  }
+}
